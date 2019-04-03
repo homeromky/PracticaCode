@@ -209,14 +209,174 @@ transition : 0.6s;
 
 .after::afer{
 
-  content: '';
+  content: "";
   display: block;
   margin: auto;
   margin-top: var(--espacios);
   width:100px;
   height: 2px;
+  opacity: .7;
   
 }
+
+
+.card{
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+.content card{
+
+  width: 31%;
+  box-shadow:  hidden;
+  height: 400px;
+}
+
+
+.people
+{
+  height: 80%;
+}
+.content-card img{
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texto-team
+{
+  height: 20%;
+  width: 100%;
+  padding: var(--espacios) 0;
+}
+
+
+.about{
+  background: url(img/03.jpg)
+}
+
+.servicios{
+  display: flex;
+  color:white;
+  justify-content: space-between;
+  margin:auto;
+  flex-wrap: wrap;
+}
+
+.caja-servicios{
+  margin-bottom: var(--espacios);
+}
+.caja-servicios{
+  text-align: center;
+}
+
+.botones-work{
+
+  overflow: hidden;
+
+}
+
+.botones-work li{
+  display: inline-block;
+  text-align: center;
+  margin-left: var(--espacios);
+  margin-bottom:  var(--espacios-contenido);
+  padding: 6px 12px;
+  border: 1px solid var(--color1);
+  list-style: none;
+  color: var(--color);
+
+}
+
+.botones-work li:hover{
+
+  background: var(--color1);
+  color:#fff;
+  cursor:pointer;
+
+
+}
+
+.botones-work .active{
+
+  background: var(--color1);
+  color:#fff;
+}
+
+.galeria-work{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.galeria-work .cont-work{
+  width: 31%;
+  box-shadow: 0 0 6px rgba(0,0,0,5);
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: var(--espacios-contenido);
+
+}
+
+.img-work
+{
+  height: 90%;
+  width: 100%;
+}
+.img-work .img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.textos-work h4{
+  line-height: 30px;
+font-weight: 300;
+}
+
+.footer{
+  background: url(image/02.jpg)
+}
+
+.marca-logo{
+width: 40%;
+margin: auto;
+margin-bottom: var(--espacios);
+}
+
+.marca-logo img{
+ width: 100%;
+}
+.iconos{
+  display: flex;
+  margin: auto;
+  justify-content:  space-around;
+  width: 100%;
+}
+
+.fab{
+  font-size: 60px;
+  color:#fff;
+  margin-bottom: va(--espacios);
+ display: inline-block;
+
+
+}
+
+
+footer p{
+  margin-top: var(--espacios);
+}
+
+
+
+
+
+
 
 
 

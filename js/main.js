@@ -16,11 +16,15 @@ function menus(){
          nav.classList.remove('nav2');
          nav.className = ('nav1');
          nav.style.transition = '1s';
+         menu.style.top = '80px';
+         abrir.style.color = '#fff';
      }else
      {
          nav.classList.remove('nav1');
          nav.className = ('nav2');
           nav.style.transition = '1s';
+           menu.style.top = '100px';
+           abrir.style.color = '#000';
         
      }
 }
@@ -29,34 +33,65 @@ function menus(){
 
 function apertura(){
     if(cerrado){
-         menu.style.width = '70vw';
+        menu.style.width = '70vw';
         cerrado= false;
     }
     else{
+        cerrado = true;
         menu.style.width = '0%';
         menus.style.overflow = 'hidden';
-        cerrado= false;
+       
 
     }
+   
 }
 
-/*
-windows.addEventListener('load',function(){
 
-    menus();
-}); */
+window.addEventListener('load', function(){
+
+   $('#onload').fadeOut();
+   $('body').removeClass('hidden');
+ menus();
+}); 
 
 
 
 window.addEventListener('scroll', function(){
-menus();
 console.log(window.pageYOffset);
+menus();
+
+});
+
+window.addEventListener('rezise', function(){
+if(this.screen.width>= 700){
+    cerrado = true;
+    menu.style.removeProperty('overflow');
+    menu.style.removeProperty('width');
+
+}
 
 });
 
 abrir.addEventListener('click', function(){
 
 apertura();
+
+});
+
+
+window.addEventListener('click', function(e){
+if(cerrado == false)
+{
+        let span = document.querySelector('span');
+        if(e.target !== span && e.target !== abrir){
+           menu.style.width = '0%';
+           menu.style.overflow = 'hidden';
+           cerrado = true;
+
+        }
+
+    console.log(e.target);
+}
 
 });
 
